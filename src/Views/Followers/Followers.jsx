@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
-import GithubUser from '../../Components/GithubUser'
+
+import CardFollowers from '../../Components/CardFollowers'
 import Loader from '../../Components/Loader'
 
 const Followers = () => {
@@ -29,16 +30,16 @@ const Followers = () => {
   }, [user])
 
   return (
-    <div className="realtive flex justify-center">
+    <div className="realtive flex justify-center items-center">
       <div className="  w-4/5  flex flex-wrap justify-center items-center ">
         {followers && followers.length > 0 && !loader ? (
           followers.map(user => (
-            <GithubUser
+            <CardFollowers
               key={user.id}
               avatar={user.avatar_url}
-              github={user.html_url}
+              // github={user.html_url}
               github_name={user.login}
-              following={null}
+              
               
             />
           ))

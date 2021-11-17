@@ -4,7 +4,7 @@ const FormSearch = ({ handleUserName, handledataApi }) => {
   return (
     <form
       action=' '
-      className='w-5/6 m-auto mt-10 text-center'
+      className='w-5/6 m-auto mt-10 text-center justify-center items-center'
       onSubmit={e => handledataApi(e)}
     >
       <input
