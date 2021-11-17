@@ -12,7 +12,7 @@ const GithubUser = props => {
     following
   } = props
   return (
-    <div className=' card-header w-1/4 m-auto shadow-xl overflow-hidden'>
+    <div className=' border-2 border-gray-100 card-header w-60 m-5 shadow-xl overflow-hidden'>
       <div className='items-center object-center p-4 text-center'>
         <img
           src={avatar}

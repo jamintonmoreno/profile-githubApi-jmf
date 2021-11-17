@@ -28,7 +28,7 @@ const Home = () => {
   }
 
   return (
-    <div className="text-center">
+    <div className="text-center flex flex-wrap justify-center m-5">
       <FormSearch
         handleUserName={handleUserName}
         handledataApi={handledataApi}

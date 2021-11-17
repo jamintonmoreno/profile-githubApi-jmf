@@ -29,23 +29,25 @@ const Followers = () => {
   }, [user])
 
   return (
-    <div className="flex flex-wrap p-1  ">
-      {followers && followers.length > 0 && !loader ? (
-        followers.map(user => (
-          <GithubUser
-            key={user.id}
-            avatar={user.avatar_url}
-            github={user.html_url}
-            github_name={user.login}
-            following={null}
-            
-          />
-        ))
-      ) : (
-        <Loader />
-      )}
-      <br />
-    </div>
+    <div className="realtive flex justify-center">
+      <div className="  w-4/5  flex flex-wrap justify-center items-center ">
+        {followers && followers.length > 0 && !loader ? (
+          followers.map(user => (
+            <GithubUser
+              key={user.id}
+              avatar={user.avatar_url}
+              github={user.html_url}
+              github_name={user.login}
+              following={null}
+              
+            />
+          ))
+        ) : (
+          <Loader />
+        )}
+        <br />
+      </div>
+      </div>
   )
 }
 
